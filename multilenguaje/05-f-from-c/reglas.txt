@@ -1,0 +1,11 @@
+gcc -c f-sum.f90 -o f-sum.o
+gcc c-main.c f-sum.o -o c-main.e
+
+Para poder compilar el programa c-main.c utilizando una subrutina de fortran, necesito obtener el object ".o" de la subrutina.
+Para esto --> gcc -c f-sum.f90 -o f-sum.o
+
+Luego, linkeo --> gcc c-main.c f-sum.o -o c-main.e
+Cuando linkeo estoy generando mi c-main.e pero tambien implicitamente estoy generando mi c-main.o (tengo los dos objects).
+
+
+
